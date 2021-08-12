@@ -1,0 +1,101 @@
+@import "_mixin.scss";
+.header {
+  background-image: url(../images/mobile/image-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $white;
+  min-height: 538px;
+  &-nav {
+    padding: 0 1.5rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.75rem;
+  }
+
+  // Styling for the Na
+  &-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      margin-right: 2.9375rem;
+      font-size: 18px;
+      font-family: "Barlow", sans-serif;
+    }
+
+    > button {
+      padding: 1rem 2rem;
+      font-size: 15px;
+      font-family: "Fraunces", serif;
+      border: 0;
+      border-radius: 25.2px;
+    }
+  }
+
+  &-title {
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 900;
+      text-align: center;
+      font-size: 40px;
+      letter-spacing: 6.25px;
+    }
+  }
+
+  &-arrow {
+    margin-top: 3.25rem;
+  }
+}
+
+// Below the medium view port width
+// make the links disappear for mobile
+// view.
+@include breakpoint-down(medium) {
+  .header {
+    &-links {
+      display: none;
+    }
+  }
+}
+
+// For the tab view change the background image
+// to desktop and set the min-heigth to 800px.
+@include breakpoint-up(medium) {
+  .header {
+    background-image: url(../images/desktop/image-header.jpg);
+    min-height: 800px;
+
+    &-nav {
+      padding-bottom: 6.5625rem;
+    }
+  }
+}
+
+// For the view port greater than the large
+// hide the hamberger menu for the dektop view.
+// Also increase the title size to 56px
+@include breakpoint-up(large) {
+  .header {
+    background-image: url(../images/desktop/image-header.jpg);
+    min-height: 800px;
+    .hamburger-icon {
+      display: none;
+    }
+
+    &-nav {
+      padding: 0 2.75rem;
+      padding-top: 2.25rem;
+      padding-bottom: 6.5625rem;
+    }
+
+    &-title {
+      h1 {
+        font-size: 56px;
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}

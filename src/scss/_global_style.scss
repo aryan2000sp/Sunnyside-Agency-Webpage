@@ -1,7 +1,33 @@
+// Default resets for the whole page
+@import "_variables.scss";
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// By default we don't want style on <a> tag
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+// Class for flex-box
+// Has sub-class for justify-content and align-item
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
 }
