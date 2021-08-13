@@ -2,8 +2,10 @@ import React from "react";
 import hambergerIcon from "./images/icon-hamburger.svg";
 import logo from "./images/logo.svg";
 import arrow from "./images/icon-arrow-down.svg";
+import { useState } from "react";
 // import image from "./images/mobile/image-header.jpg";
 const Header = () => {
+  const [show, setShow] = useState(false);
   return (
     <header className="header">
       {/* The navigation bar of the page */}
@@ -17,6 +19,7 @@ const Header = () => {
           src={hambergerIcon}
           className="hamburger-icon"
           alt="hambergerIcon"
+          onClick={() => setShow(!show)}
         />
 
         {/* This the navigation links for the page */}
@@ -44,7 +47,28 @@ const Header = () => {
       <div className="header-arrow flex flex-jc-c flex-ai-c">
         <img src={arrow} alt="arrow-down" />
       </div>
+
+      {/* This the popup navbar for mobile view */}
+      {show && <PopupNav />}
     </header>
+  );
+};
+
+const PopupNav = () => {
+  return (
+    <article className="header-popup-nav flex-col-jc-c">
+      <div className="item">
+        <a href="/">About</a>
+      </div>
+      <div className="item">
+        <a href="/">Services</a>
+      </div>
+      <div className="item">
+        <a href="/">Projects</a>
+      </div>
+
+      <button>CONTACT</button>
+    </article>
   );
 };
 

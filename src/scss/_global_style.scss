@@ -31,3 +31,19 @@ a {
     align-items: center;
   }
 }
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}

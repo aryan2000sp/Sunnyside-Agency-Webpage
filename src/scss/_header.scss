@@ -4,9 +4,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  // Position is set to relative so that we can
+  // place the popup nav component
+  position: relative;
+
   color: $white;
   min-height: 538px;
   &-nav {
+    // position: relative;
     padding: 0 1.5rem;
     padding-top: 2.25rem;
     padding-bottom: 2.75rem;
@@ -47,6 +53,39 @@
 
   &-arrow {
     margin-top: 3.25rem;
+  }
+
+  &-popup-nav {
+    $x: 100%;
+    $y: 3rem;
+    min-height: 300px;
+    position: absolute;
+    background-color: $white;
+    width: calc(#{$x} - #{$y});
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 5.125rem;
+    text-align: center;
+    .item {
+      margin: 2rem 0;
+      > a {
+        color: $dark-grayish-blue;
+        font-size: 20px;
+        font-family: "Barlow", sans-serif;
+      }
+    }
+
+    button {
+      background-color: #fbd600;
+      color: #24303e;
+      border: 0;
+      height: 56px;
+      border-radius: 28px;
+      width: 156px;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 15px;
+    }
   }
 }
 
@@ -96,6 +135,10 @@
         font-size: 56px;
         margin-bottom: 6rem;
       }
+    }
+
+    &-popup-nav {
+      display: none;
     }
   }
 }
