@@ -1,16 +1,16 @@
 // Create a map for viewport breakpoints
-// 600px, 767px, 1440px
+// 600px, 840px, 1300px
 $breakpoints-up: (
   "medium": "37.5em",
-  "large": "47.9375em",
-  "x-large": "90em",
+  "large": "52.5em",
+  "x-large": "81.25em",
 );
 
-// 330px, 767px, 1439px
+// 330px, 840px, 1300px
 $breakpoints-down: (
   "small": "20.625em",
-  "medium": "47.9375em",
-  "large": "89.9375em",
+  "medium": "52.5em",
+  "large": "81.25em",
 );
 
 @mixin breakpoint-up($size) {
