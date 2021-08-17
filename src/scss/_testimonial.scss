@@ -1,5 +1,6 @@
 .testimonial {
-  margin: 4rem 1.5rem;
+  // margin: 4rem 1.5rem;
+  margin: 4rem 1.5rem 0rem 1.5rem;
 
   .section1 {
     margin-bottom: 4rem;
@@ -80,7 +81,7 @@
 // For view port 1300px and above
 @include breakpoint-up(x-large) {
   .testimonial {
-    margin: 10rem 10.3125rem;
+    margin: 10rem 10.3125rem 0rem 10.3125rem;
     .section2 {
       flex-direction: row;
       justify-content: space-between;
