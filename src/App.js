@@ -4,6 +4,7 @@ import Header from "./Header";
 import UpperMain from "./UpperMain";
 import Testimonial from "./Testimonial";
 import LowerMain from "./LowerMain";
+import Footer from "./Footer";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
       <UpperMain />
       <Testimonial />
       <LowerMain />
+      <Footer />
     </>
   );
 }

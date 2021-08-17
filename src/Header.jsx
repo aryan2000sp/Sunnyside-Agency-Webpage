@@ -66,7 +66,6 @@ const PopupNav = () => {
       <div className="item">
         <a href="/">Projects</a>
       </div>
-
       <button>CONTACT</button>
     </article>
   );
